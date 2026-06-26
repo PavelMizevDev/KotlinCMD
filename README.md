@@ -6,7 +6,7 @@ While its feature set is currently limited, the core concept is to allow users t
 Additionally, this project is being developed as part of my process of learning the Kotlin programming language.
 
 ### Features:
-At present, the project supports only two commands:
+At present, the project supports only three commands:
 - `help` – displays the available terminal commands.
 - `exit` – exits the terminal (with a confirmation prompt).
 - `calc` – used to launch the calculator.
@@ -51,7 +51,7 @@ Contact me: all available contact methods can be found on my GitHub profile.
 Также этот проект создается во время моего обучения языка программирования Kotlin.
 
 ### Возможности:
-На данный момент этот проект имеет лишь 2 команды:
+На данный момент этот проект имеет лишь 3 команды:
 - `help` - используется для вывода доступных команд терминала.
 - `exit` - используется для выхода с терминала с подтверждением.
 - `calc` - используется для запуска калькулятора.
