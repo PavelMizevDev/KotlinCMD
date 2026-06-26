@@ -9,6 +9,7 @@ Additionally, this project is being developed as part of my process of learning 
 At present, the project supports only two commands:
 - `help` – displays the available terminal commands.
 - `exit` – exits the terminal (with a confirmation prompt).
+- `calc` – used to launch the calculator.
 
 #### Running the program:
 
@@ -53,6 +54,7 @@ Contact me: all available contact methods can be found on my GitHub profile.
 На данный момент этот проект имеет лишь 2 команды:
 - `help` - используется для вывода доступных команд терминала.
 - `exit` - используется для выхода с терминала с подтверждением.
+- `calc` - используется для запуска калькулятора.
 
 #### Запуск программы:
 
