@@ -10,6 +10,15 @@ At present, the project supports only three commands:
 - `help` – displays the available terminal commands.
 - `exit` – exits the terminal (with a confirmation prompt).
 - `calc` – used to launch the calculator.
+- - `cfile` - activates the file manager with the ability to create files
+> how to use:
+```bash
+Create File > text.txt #The file will be created in the same directory as the program file (KotlinCMD); this method is similar to ./text.txt, and ../text.txt is also supported, which can create a file in the parent directory relative to the program.
+```
+```bash
+Create File > C:/Users/Admin/Documents/text.txt #The file will be created at the specified path.
+```
+- `dfile` - activates the file manager with the ability to delete files (works just like file creation, but for deletion)
 
 #### Running the program:
 
@@ -55,6 +64,15 @@ Contact me: all available contact methods can be found on my GitHub profile.
 - `help` - используется для вывода доступных команд терминала.
 - `exit` - используется для выхода с терминала с подтверждением.
 - `calc` - используется для запуска калькулятора.
+- `cfile` - активирует файловый менеджер с возможностью создавать файлы
+> как использовать:
+```bash
+Create File > text.txt #Файл создастся там же где лежит файл программы (KotlinCMD), этот способ аналогичен ./text.txt и также есть ../text.txt который может создасть файл на папку выше относительно программы.
+```
+```bash
+Create File > C:/Users/Admin/Documents/text.txt #Файл создастся по заданному пути.
+```
+- `dfile` - активирует файловый менеджер с возможностью создавать файлы (все аналогично с созданием, только тут удаление)
 
 #### Запуск программы:
 
