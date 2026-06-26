@@ -5,12 +5,14 @@ import com.turashift.kotlincmd.modules.EXIT_COMMAND
 import com.turashift.kotlincmd.modules.CALC_COMMAND
 import com.turashift.kotlincmd.modules.CREATE_FILE_COMMAND
 import com.turashift.kotlincmd.modules.DELETE_FILE_COMMAND
+import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
 
 //Importing functions from modules\Импорт функций модулей
 import com.turashift.kotlincmd.modules.exit
 import com.turashift.kotlincmd.modules.calc
 import com.turashift.kotlincmd.modules.createFile
 import com.turashift.kotlincmd.modules.deleteFile
+import com.turashift.kotlincmd.modules.infoCMD
 
 fun main() {
 
@@ -30,21 +32,20 @@ fun main() {
         when(command) {
 
             HELP_COMMAND -> {
+
                 println("$HELP_COMMAND - displays available commands.")
                 println("$EXIT_COMMAND - closes the terminal after confirmation.")
                 println("$CALC_COMMAND - launches the calculator.")
                 println("$CREATE_FILE_COMMAND - file creation command.")
                 println("$DELETE_FILE_COMMAND - file deletion command.")
+                println("$INFO_CMD_COMMAND - displaying project information.")
+
             }
-
             EXIT_COMMAND -> exit_Output = exit()
-
             CALC_COMMAND -> calc()
-
             CREATE_FILE_COMMAND -> createFile()
-
             DELETE_FILE_COMMAND -> deleteFile()
-
+            INFO_CMD_COMMAND -> infoCMD()
             else -> println("Unknown command: $command.")
 
         }

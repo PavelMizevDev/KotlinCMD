@@ -37,9 +37,13 @@ fun deleteFile() {
 
         //Processing\Обработка
         if (file.delete() == true) {
+
             println("File deleted: $file")
+
         } else {
+
             println("Failed to delete the file: $file")
+
         }
 
     } else {

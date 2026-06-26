@@ -14,11 +14,8 @@ fun calc_work() {
         when (Char) {
 
             "+" -> println(Num1 + Num2)
-
             "-" -> println(Num1 - Num2)
-
             "*" -> println(Num1 * Num2)
-
             "/", ":" -> {
 
                 if (Num2 != 0.0) {
@@ -53,6 +50,7 @@ fun calc () {
     //Main program loop\Основной цикл
     while (true) {
 
+        //Launch calculator\Запуск калькулятора
         calc_work()
 
         //Request to continue function execution\Запрос на продолжение
@@ -62,12 +60,12 @@ fun calc () {
         //Command processing\Обработка команд
         when (input) {
 
-            "Y", "y" -> {}
-
+            "Y", "y" -> {/*The processing routine needs to be aware of this command\Нужно чтобы обработка знала об этой команде*/}
             "N", "n" -> break
-
             else -> {
+
                 print("Exit cancelled due to user input error.")
+
             }
 
         }

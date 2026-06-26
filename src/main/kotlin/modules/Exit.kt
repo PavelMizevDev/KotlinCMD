@@ -15,22 +15,28 @@ fun exit(): Boolean {
     when (confirm) {
 
         "Y", "y" -> {
-            output = true
-        }
 
+            output = true
+
+        }
         "N", "n" -> {
+
             print("Exit cancelled!")
             output = false
-        }
 
+        }
         else -> {
+
             print("Exit cancelled due to user input error.")
             output = false
+
         }
 
     }
+
     //Data
     return output
+
 }
 
 const val EXIT_COMMAND = "exit"
