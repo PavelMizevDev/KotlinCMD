@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.turashift.kotlincmd'
-version = '2-26062026a'
+version = '3-26062026a'
 
 repositories {
     mavenCentral()
