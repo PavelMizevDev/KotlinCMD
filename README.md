@@ -19,7 +19,7 @@ Create File > text.txt #The file will be created in the same directory as the pr
 Create File > C:/Users/Admin/Documents/text.txt #The file will be created at the specified path.
 ```
 - `dfile` - activates the file manager with the ability to delete files (works just like file creation, but for deletion)
-- `infoCMD` - displays information about the project.
+- `info_cmd` - displays information about the project.
 
 #### Running the program:
 
@@ -74,7 +74,7 @@ Create File > text.txt #Файл создастся там же где лежи�
 Create File > C:/Users/Admin/Documents/text.txt #Файл создастся по заданному пути.
 ```
 - `dfile` - активирует файловый менеджер с возможностью создавать файлы (все аналогично с созданием, только тут удаление)
-- `infoCMD` - отображает информацию о проекте.
+- `info_cmd` - отображает информацию о проекте.
 
 #### Запуск программы:
 
