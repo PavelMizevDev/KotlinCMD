@@ -6,7 +6,7 @@ import java.io.File
 fun createFile() {
 
     //Prompt manager\Промт менеджера
-    println("Create File > ")
+    print("Create File ~> ")
 
     //Requesting the file name and path\Запрос на имя файла или путь
     val file = File(readln())
@@ -27,7 +27,7 @@ fun createFile() {
 fun deleteFile() {
 
     //Prompt manager\Промт менеджера
-    println("Delete File > ")
+    print("Delete File ~> ")
 
     //Requesting the file name and path\Запрос на имя файла или путь
     val file = File(readln())
@@ -41,6 +41,10 @@ fun deleteFile() {
         } else {
             println("Failed to delete the file: $file")
         }
+
+    } else {
+
+        println("The file does not exist or the directory is incorrect: $file")
 
     }
 

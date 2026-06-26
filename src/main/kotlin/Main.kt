@@ -21,8 +21,7 @@ fun main() {
     while (exit_Output == false) {
 
         //Command promt\Промт команды
-        println()
-        print("kcmd ~# ")
+        print("kcmd ~> ")
 
         //Read command\Ввод команды
         var command = readln()
@@ -31,9 +30,11 @@ fun main() {
         when(command) {
 
             HELP_COMMAND -> {
-                println("help - displays available commands.")
+                println("$HELP_COMMAND - displays available commands.")
                 println("$EXIT_COMMAND - closes the terminal after confirmation.")
                 println("$CALC_COMMAND - launches the calculator.")
+                println("$CREATE_FILE_COMMAND - file creation command.")
+                println("$DELETE_FILE_COMMAND - file deletion command.")
             }
 
             EXIT_COMMAND -> exit_Output = exit()
