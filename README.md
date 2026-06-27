@@ -6,20 +6,20 @@ While its feature set is currently limited, the core concept is to allow users t
 Additionally, this project is being developed as part of my process of learning the Kotlin programming language.
 
 ### Features:
-At present, the project supports only three commands:
-- `help` – displays the available terminal commands.
-- `exit` – exits the terminal (with a confirmation prompt).
-- `calc` – used to launch the calculator.
-- `cfile` - activates the file manager with the ability to create files
-> how to use:
+Currently, this project includes only 6 commands:
+- `help` - displays available terminal commands.
+- `exit` - exits the terminal (with confirmation).
+- `calc` - launches the calculator.
+- `cfile` - activates the file manager with file creation capabilities.
+> Usage:
 ```bash
-Create File > text.txt #The file will be created in the same directory as the program file (KotlinCMD); this method is similar to ./text.txt, and ../text.txt is also supported, which can create a file in the parent directory relative to the program.
+Create File > text.txt #Creates the file in the same directory as the program (KotlinCMD); similar to ./text.txt. You can also use ../text.txt to create a file in the parent directory.
 ```
 ```bash
-Create File > C:/Users/Admin/Documents/text.txt #The file will be created at the specified path.
+Create File > C:/Users/Admin/Documents/text.txt #Creates the file at the specified path.
 ```
-- `dfile` - activates the file manager with the ability to delete files (works just like file creation, but for deletion)
-- `info_cmd` - displays information about the project.
+- `dfile` - activates the file manager with file deletion capabilities (works just like the creation command, but for deleting).
+- `info_cmd` - displays project information.
 
 #### Running the program:
 
@@ -61,7 +61,7 @@ Contact me: all available contact methods can be found on my GitHub profile.
 Также этот проект создается во время моего обучения языка программирования Kotlin.
 
 ### Возможности:
-На данный момент этот проект имеет лишь 3 команды:
+На данный момент этот проект имеет лишь 6 команд:
 - `help` - используется для вывода доступных команд терминала.
 - `exit` - используется для выхода с терминала с подтверждением.
 - `calc` - используется для запуска калькулятора.
