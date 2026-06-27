@@ -3,9 +3,13 @@ package com.turashift.kotlincmd.modules
 private fun calc_work() {
 
     //Variables\Переменные
-    val Num1 = readln().toDoubleOrNull()
-    val Char = readln()
-    val Num2 = readln().toDoubleOrNull()
+    val input = readln()
+
+    //Fragmentation\Раздробление
+    val list = input.split("", " ")
+    val Num1 = list[0].toDoubleOrNull()
+    val Char = list[1]
+    val Num2 = list[2].toDoubleOrNull()
 
     //Input validation\Проверка ввода
     if (Num1 != null && Num2 != null) {
