@@ -25,7 +25,6 @@ fun calc() {
 
     while (true) {
         calc_work()
-
         print("Continue? [Y/n] ")
         input = readln()
 
