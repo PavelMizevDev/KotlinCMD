@@ -8,24 +8,21 @@ private fun calc_work() {
     val Char: Any?
     val Num2: Any?
 
-    //Fragmentation\Раздробление
-    var list = input.split("", " ")
+    println("Enter with spaces, for example: \"723 + 127\" or \"72 / 8\".")
 
+    //Fragmentation\Раздробление
+    var list = input.split(" ")
+
+    //Array processing\Обработка массива
     if (list.size == 3) {
 
         Num1 = list[0].toDoubleOrNull()
         Char = list[1]
         Num2 = list[2].toDoubleOrNull()
 
-    } else if (list.size == 5) {
-
-        Num1 = list[1].toDoubleOrNull()
-        Char = list[2]
-        Num2 = list[3].toDoubleOrNull()
-
     } else {
 
-        println("Error!")
+        println("Input error: $list")
         return
 
     }
