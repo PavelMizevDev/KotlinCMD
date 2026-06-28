@@ -17,7 +17,7 @@ fun createFile() {
     //Processing\Обработка
     try {
 
-        if (file.createNewFile() == true) {
+        if (file.createNewFile()) {
 
             println("File created: $file")
 
@@ -44,13 +44,12 @@ fun deleteFile() {
     val file = File(readln())
 
     //Existence check\Проверка на существование
-    if (file.exists() == true) {
+    if (file.exists()) {
 
         //Processing\Обработка
         try {
 
-
-            if (file.delete() == true) {
+            if (file.delete()) {
 
                 println("File deleted: $file")
 
