@@ -59,7 +59,7 @@ private fun calc_work() {
 
     } else {
 
-        println("Error in one of the numerical inputs: Num1: $Num1 or Num2: $Num2")
+        println("Error in one of the numerical inputs: $list")
 
     }
 
