@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+	implementation files('libs/calib.jar')
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
 
