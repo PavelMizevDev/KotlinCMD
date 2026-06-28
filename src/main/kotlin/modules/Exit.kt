@@ -16,19 +16,19 @@ fun exit(): Boolean {
 
         "Y", "y" -> {
 
-            output = true
+            output = false
 
         }
         "N", "n" -> {
 
             print("Exit cancelled!")
-            output = false
+            output = true
 
         }
         else -> {
 
             print("Exit cancelled due to user input error.")
-            output = false
+            output = true
 
         }
 

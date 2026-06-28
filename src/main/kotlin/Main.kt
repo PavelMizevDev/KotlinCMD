@@ -17,10 +17,10 @@ import com.turashift.kotlincmd.modules.infoCMD
 fun main() {
 
     //Variables\Переменные
-    var exit_Output = false
+    var exit_Output = true
 
     //Main program loop\Основной цикл
-    while (exit_Output == false) {
+    while (exit_Output) {
 
         //Command promt\Промт команды
         print("$PROMT ~> ")

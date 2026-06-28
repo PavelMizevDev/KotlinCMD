@@ -25,7 +25,7 @@ private fun calc_work() {
 
     } else {
 
-        println("Error! The splitting was done incorrectly! It is better to enter each character separated by a space.")
+        println("Error!")
         return
 
     }
