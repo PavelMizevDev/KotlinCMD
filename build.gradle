@@ -11,12 +11,14 @@ sourceSets {
         java.srcDirs += 'src/main/kotlin'
     }
 }
+version = '11-28062026a'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+	implementation files('libs/calib.jar')
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
 

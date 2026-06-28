@@ -3,6 +3,9 @@ package com.turashift.kotlincmd.modules
 import com.calib.CaLib
 
 private fun calc_work() {
+
+private fun calc_work() {
+
     println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
     print("Expression: ")
     val input = readln()
@@ -17,6 +20,14 @@ private fun calc_work() {
         println("Answer: $result")
     } catch (e: IllegalArgumentException) {
         println("Calculation error: ${e.message}")
+
+        val result = CaLib.calculate(input)
+        println("Answer: $result")
+
+    } catch (e: IllegalArgumentException) {
+
+        println("Calculation error: ${e.message}")
+
     }
 }
 
@@ -26,6 +37,8 @@ fun calc() {
     while (true) {
         calc_work()
 
+
+        calc_work()
         print("Continue? [Y/n] ")
         input = readln()
 
@@ -34,6 +47,9 @@ fun calc() {
             "N", "n" -> break
             else -> {
                 println("Exit cancelled due to user input error.")
+
+                println("Exit cancelled due to user input error.")
+
             }
         }
     }
