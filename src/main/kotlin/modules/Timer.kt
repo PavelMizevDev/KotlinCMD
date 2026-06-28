@@ -16,13 +16,16 @@ fun timer () {
         //Read cycle\Цикл считывания
         while (true) {
 
+
             //Reading seconds\Считывание секунд
+            println("Seconds have passed: $i")
             Thread.sleep(1000)
             i++
 
             //Iteration processing\Обработка итераций
             if (i == timerVal) {
 
+                println("The timer has finished running. Seconds have passed: $i")
                 break
 
             }
