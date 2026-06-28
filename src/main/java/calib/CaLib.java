@@ -1,6 +1,6 @@
 //By Roit-liasp
 
-package com.calib;
+package calib;
 
 public class CaLib {
     private String expression;

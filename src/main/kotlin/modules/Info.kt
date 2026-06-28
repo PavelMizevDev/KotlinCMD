@@ -11,6 +11,7 @@ fun infoCMD () {
         Author: Pavel Mizev
         Developers:
         - Pavel Mizev
+        - Roit ( https://github.com/Roit-liasp )
         """.trimIndent()
     )
 

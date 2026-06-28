@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.turashift.kotlincmd'
-version = '10-28062026f'
+version = '11-28062026a'
 
 sourceSets {
     main {
@@ -18,7 +18,6 @@ repositories {
 }
 
 dependencies {
-	implementation files('libs/calib.jar')
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
 

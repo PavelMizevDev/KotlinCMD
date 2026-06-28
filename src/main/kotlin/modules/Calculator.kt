@@ -1,8 +1,6 @@
 package com.turashift.kotlincmd.modules
 
-import com.calib.CaLib
-
-private fun calc_work() {
+import calib.CaLib
 
 private fun calc_work() {
 
