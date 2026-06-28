@@ -6,7 +6,7 @@ fun timer () {
     var i = 0
 
     //Input\Ввод
-    println("Start a timer for \n seconds:")
+    print("Start a timer for \n seconds:")
     val readVal = readln()
     val timerVal: Int? = readVal.toIntOrNull()
 
