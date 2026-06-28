@@ -6,6 +6,7 @@ import com.turashift.kotlincmd.modules.CALC_COMMAND
 import com.turashift.kotlincmd.modules.CREATE_FILE_COMMAND
 import com.turashift.kotlincmd.modules.DELETE_FILE_COMMAND
 import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
+import com.turashift.kotlincmd.modules.TIMER_COMMAND
 
 //Importing functions from modules\Импорт функций модулей
 import com.turashift.kotlincmd.modules.exit
@@ -13,6 +14,7 @@ import com.turashift.kotlincmd.modules.calc
 import com.turashift.kotlincmd.modules.createFile
 import com.turashift.kotlincmd.modules.deleteFile
 import com.turashift.kotlincmd.modules.infoCMD
+import com.turashift.kotlincmd.modules.timer
 
 fun main() {
 
@@ -41,6 +43,7 @@ fun main() {
                     $CREATE_FILE_COMMAND - file creation command.
                     $DELETE_FILE_COMMAND - file deletion command.
                     $INFO_CMD_COMMAND - displaying project information.
+                    $TIMER_COMMAND - starting the timer.
                     """.trimIndent()
                 )
 
@@ -50,6 +53,7 @@ fun main() {
             CREATE_FILE_COMMAND -> createFile()
             DELETE_FILE_COMMAND -> deleteFile()
             INFO_CMD_COMMAND -> infoCMD()
+            TIMER_COMMAND -> timer()
             else -> println("Unknown command: $command.")
 
         }
