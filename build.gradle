@@ -3,6 +3,14 @@ plugins {
 }
 
 group = 'com.turashift.kotlincmd'
+version = '10-28062026f'
+
+sourceSets {
+    main {
+        kotlin.srcDirs += 'src/main/kotlin'
+        java.srcDirs += 'src/main/kotlin'
+    }
+}
 version = '11-28062026a'
 
 repositories {
@@ -28,6 +36,10 @@ jar {
 
 kotlin {
     jvmToolchain(21)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
 }
 
 test {

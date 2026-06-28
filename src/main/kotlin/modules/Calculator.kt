@@ -4,6 +4,8 @@ import com.calib.CaLib
 
 private fun calc_work() {
 
+private fun calc_work() {
+
     println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
     print("Expression: ")
     val input = readln()
@@ -14,6 +16,10 @@ private fun calc_work() {
     }
 
     try {
+        val result = CaLib.calculate(input)
+        println("Answer: $result")
+    } catch (e: IllegalArgumentException) {
+        println("Calculation error: ${e.message}")
 
         val result = CaLib.calculate(input)
         println("Answer: $result")
@@ -23,13 +29,14 @@ private fun calc_work() {
         println("Calculation error: ${e.message}")
 
     }
-
 }
 
 fun calc() {
     var input: String
 
     while (true) {
+        calc_work()
+
 
         calc_work()
         print("Continue? [Y/n] ")
@@ -39,15 +46,13 @@ fun calc() {
             "Y", "y" -> {}
             "N", "n" -> break
             else -> {
+                println("Exit cancelled due to user input error.")
 
                 println("Exit cancelled due to user input error.")
 
             }
-
         }
-
     }
-
 }
 
 const val CALC_COMMAND = "calc"
