@@ -9,14 +9,19 @@ private fun calc_work() {
     val input = readln()
 
     if (input.isBlank()) {
+
         println("Input error: Expression cannot be empty.")
         return
+
     }
 
     try {
+
         val result = CaLib.calculate(input)
         println("Answer: $result")
+
     } catch (e: IllegalArgumentException) {
+
         println("Calculation error: ${e.message}")
 
         val result = CaLib.calculate(input)
@@ -27,16 +32,17 @@ private fun calc_work() {
         println("Calculation error: ${e.message}")
 
     }
+
 }
 
 fun calc() {
+
     var input: String
 
     while (true) {
-        calc_work()
-
 
         calc_work()
+
         print("Continue? [Y/n] ")
         input = readln()
 
@@ -49,8 +55,11 @@ fun calc() {
                 println("Exit cancelled due to user input error.")
 
             }
+
         }
+
     }
+
 }
 
 const val CALC_COMMAND = "calc"
