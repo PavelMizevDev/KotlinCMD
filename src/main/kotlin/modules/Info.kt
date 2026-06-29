@@ -5,7 +5,7 @@ fun infoCMD () {
     println(
         """
         Project: KotlinCMD
-        Version: 11-28062026a
+        Version: 12-29062026a
         Last updated: 28.06.2026 (DD.MM.YYYY)
         Status: alpha
         Author: Pavel Mizev
