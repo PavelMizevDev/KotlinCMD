@@ -50,7 +50,9 @@ For the `[path_to_your_file.jar]` part, you can simply drag and drop the project
 - The project was created in the IntelliJ IDEA development environment (by JetBrains) using the Kotlin programming language (by JetBrains).
 - Gradle is used for build automation and dependency management.
 - Git is used for version control.
-- Developer: Pavel Mizev
+- Developers:
+  Pavel Mizev ( https://github.com/PavelMizevDev )
+  Roit ( https://github.com/Roit-liasp )
 
 Contact me: all available contact methods can be found on my GitHub profile.
 
@@ -106,6 +108,8 @@ java -jar [ваш_путь_к_файлу.jar]
 - Проект был создан в среде разработки IntelliJ IDEA от JetBrains на языке программирования Kotlin от JetBrains.
 - Для сборки и управления зависимостями используется система Gradle.
 - Для контроля версий используется Git.
-- Разработчик: Павел Мизев
+- Разработчики:
+  Павел Мизев ( https://github.com/PavelMizevDev )
+  Roit ( https://github.com/Roit-liasp )
 
 Связаться со мной: все возможные пути в профиле GitHub.
