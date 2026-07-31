@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.turashift.kotlincmd'
-version = '12-29062026a'
+version = '12-01082026a'
 
 sourceSets {
     main {
@@ -11,7 +11,7 @@ sourceSets {
         java.srcDirs += 'src/main/kotlin'
     }
 }
-version = '11-28062026a'
+version = '12-01082026a'
 
 repositories {
     mavenCentral()

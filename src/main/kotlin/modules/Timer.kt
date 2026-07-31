@@ -16,7 +16,6 @@ fun timer () {
         //Read cycle\Цикл считывания
         while (true) {
 
-
             //Reading seconds\Считывание секунд
             println("Seconds have passed: $i")
             Thread.sleep(1000)
