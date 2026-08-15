@@ -10,7 +10,7 @@ Currently, this project includes only 7 commands:
 - `help` - displays available terminal commands.
 - `exit` - exits the terminal (with confirmation).
 - `calc` - launches the calculator.
-- `cfile` - activates the file manager with file creation capabilities.
+- `cfile` - activates the file manager with file creation capabilities (Disconnected! Not working!).
 > Usage:
 ```bash
 Create File > text.txt #Creates the file in the same directory as the program (KotlinCMD); similar to ./text.txt. You can also use ../text.txt to create a file in the parent directory.
@@ -18,7 +18,7 @@ Create File > text.txt #Creates the file in the same directory as the program (K
 ```bash
 Create File > C:/Users/Admin/Documents/text.txt #Creates the file at the specified path.
 ```
-- `dfile` - activates the file manager with file deletion capabilities (works just like the creation command, but for deleting).
+- `dfile` - activates the file manager with file deletion capabilities (works just like the creation command, but for deleting) (Disconnected! Not working!).
 - `info_cmd` - displays project information.
 - `timer` - starts a one-second timer.
 
@@ -68,7 +68,7 @@ Contact me: all available contact methods can be found on my GitHub profile.
 - `help` - используется для вывода доступных команд терминала.
 - `exit` - используется для выхода с терминала с подтверждением.
 - `calc` - используется для запуска калькулятора.
-- `cfile` - активирует файловый менеджер с возможностью создавать файлы
+- `cfile` - активирует файловый менеджер с возможностью создавать файлы (Отключено! Не работает!).
 > как использовать:
 ```bash
 Create File > text.txt #Файл создастся там же где лежит файл программы (KotlinCMD), этот способ аналогичен ./text.txt и также есть ../text.txt который может создасть файл на папку выше относительно программы.
@@ -76,7 +76,7 @@ Create File > text.txt #Файл создастся там же где лежи�
 ```bash
 Create File > C:/Users/Admin/Documents/text.txt #Файл создастся по заданному пути.
 ```
-- `dfile` - активирует файловый менеджер с возможностью создавать файлы (все аналогично с созданием, только тут удаление)
+- `dfile` - активирует файловый менеджер с возможностью создавать файлы (все аналогично с созданием, только тут удаление) (Отключено! Не работает!).
 - `info_cmd` - отображает информацию о проекте.
 - `timer` - запускает секундный таймер.
 
