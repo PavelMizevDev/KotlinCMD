@@ -2,7 +2,7 @@ package com.turashift.kotlincmd.modules
 
 import calib.CaLib
 
-private fun calc_work() {
+private fun CalcWork() {
 
     println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
     print("Expression: ")
@@ -35,13 +35,13 @@ private fun calc_work() {
 
 }
 
-fun calc() {
+fun Calc() {
 
     var input: String
 
     while (true) {
 
-        calc_work()
+        CalcWork()
 
         print("Continue? [Y/n] ")
         input = readln()

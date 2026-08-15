@@ -1,3 +1,4 @@
+/*
 package com.turashift.kotlincmd.modules
 
 //Importing commands\Импорт команд
@@ -75,3 +76,4 @@ fun deleteFile() {
 
 const val CREATE_FILE_COMMAND = "cfile"
 const val DELETE_FILE_COMMAND = "dfile"
+*/

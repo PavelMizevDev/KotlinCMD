@@ -1,6 +1,6 @@
 package com.turashift.kotlincmd.modules
 
-fun infoCMD () {
+fun InfoCMD () {
 
     println(
         """

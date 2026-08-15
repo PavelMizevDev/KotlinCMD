@@ -1,6 +1,6 @@
 package com.turashift.kotlincmd.modules
 
-fun timer () {
+fun Timer () {
 
     //Variables\Переменные
     var i = 0
