@@ -42,33 +42,37 @@ class TimeManager {
 
         //Seconds request\Запрос секунд
         print("How many seconds to set the timer for: ")
-        val seconds = readln().toIntOrNull()
+        var i = readln().toIntOrNull()
 
         //Input processing\Обработка ввода
-        if (seconds == null) {
+        if (i == null) {
 
             println("Input error! Only integers are allowed!")
             return
 
-        } else if (seconds < 1) {
+        } else if (i < 1) {
 
             println("Input error! At least 1!")
             return
 
         } else {
 
-            println("Seconds elapsed: $seconds")
+            println("Seconds elapsed: $i")
             print("Stop? [Y/n] ")
 
             //New thread\Новый поток
             thread {
 
-                var i = seconds
-
                 //Counting cycle\Цикл отсчета
                 while (isRunning) {
 
-                    print("\u001B[s\u001B[1A\r\u001B[2KSeconds elapsed: $i\u001B[u")
+                    //Time variables\Переменные времени
+                    val s = i % 60 //Seconds
+                    val m = (i / 60) % 60 //Minutes
+                    val h = (i / 3600) % 24 //Hours
+                    val d = i / 86400 //Days
+
+                    print("\u001B[s\u001B[1A\r\u001B[2KSeconds elapsed: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
 
                     //Checking that the number does not become less than 1\Проверка чтобы число не стало меньше 1
                     if (i < 1) {
@@ -118,12 +122,18 @@ class TimeManager {
         //New thread\Новый поток
         thread {
 
-            var i = 0 //Iteration variable\Переменная для итераций
+            var i: Long = 0 //Iteration variable\Переменная для итераций
 
             //Counting cycle\Цикл отсчета
             while (isRunning) {
 
-                print("\u001B[s\u001B[1A\r\u001B[2KSeconds passed: $i\u001B[u")
+                //Time variables\Переменные времени
+                val s = i % 60 //Seconds
+                val m = (i / 60) % 60 //Minutes
+                val h = (i / 3600) % 24 //Hours
+                val d = i / 86400 //Days
+
+                print("\u001B[s\u001B[1A\r\u001B[2KIt has passed: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
 
                 Thread.sleep(1000)
                 i++
