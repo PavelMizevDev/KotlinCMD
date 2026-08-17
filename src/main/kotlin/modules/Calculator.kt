@@ -6,7 +6,7 @@ private fun calcWork() {
 
     println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
     print("Expression: ")
-    val input = readln()
+    val input = readln() //User input prompt\Запрос ввода пользователя
 
     if (input.isBlank()) {
 
@@ -16,13 +16,6 @@ private fun calcWork() {
     }
 
     try {
-
-        val result = CaLib.calculate(input)
-        println("Answer: $result")
-
-    } catch (e: IllegalArgumentException) {
-
-        println("Calculation error: ${e.message}")
 
         val result = CaLib.calculate(input)
         println("Answer: $result")

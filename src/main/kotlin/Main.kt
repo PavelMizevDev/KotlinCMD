@@ -40,8 +40,6 @@ fun main() {
                     $HELP_COMMAND - displays available commands.
                     $EXIT_COMMAND - closes the terminal after confirmation.
                     $CALC_COMMAND - launches the calculator.
-                    ${/*$CREATE_FILE_COMMAND - file creation command.*/ ""}
-                    ${/*$DELETE_FILE_COMMAND - file deletion command.*/ ""}
                     $INFO_CMD_COMMAND - displaying project information.
                     $TIMER_MANAGER_COMMAND - starting the TimerManager (Timer/Stopwatch).
                     """.trimIndent()

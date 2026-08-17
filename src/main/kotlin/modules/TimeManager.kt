@@ -4,10 +4,12 @@ import kotlin.concurrent.thread
 
 fun timeManagerFun() {
 
-    val tManager = TimeManager()
+    val tManager = TimeManager() //Importing the class\Подключение класса
 
     print("Select: Timer - [T/t] or Stopwatch - [S/s] ")
-    val select = readln()
+    val select = readln() //User input prompt\Запрос ввода пользователя
+
+    //Command processing\Обработка команды
     when (select) {
 
         "T", "t" -> {
@@ -26,8 +28,11 @@ fun timeManagerFun() {
 
 class TimeManager {
 
-    @Volatile private var isRunning = false //Operation flag\Флаг работы
-    @Volatile private var timerRunning = false //Operation flag\Флаг работы
+    //Flags
+    /* (`@Volatile` guarantees that a change to a variable made by one thread is immediately visible to all other threads.\
+    `@Volatile` гарантирует, что изменение переменной одним потоком мнгновенно видны всем остальным потокам.) */
+    @Volatile private var isRunning = false
+    @Volatile private var timerRunning = false
 
     //Timer\Таймер
     fun timer() {
@@ -65,6 +70,7 @@ class TimeManager {
 
                     print("\u001B[s\u001B[1A\r\u001B[2KSeconds elapsed: $i\u001B[u")
 
+                    //Checking that the number does not become less than 1\Проверка чтобы число не стало меньше 1
                     if (i < 1) {
 
                         print("\u001B[u\r\u001B[2KTime's up! Press Enter to close!")
@@ -111,22 +117,28 @@ class TimeManager {
 
         //New thread\Новый поток
         thread {
+
             var i = 0 //Iteration variable\Переменная для итераций
 
             //Counting cycle\Цикл отсчета
             while (isRunning) {
+
                 print("\u001B[s\u001B[1A\r\u001B[2KSeconds passed: $i\u001B[u")
+
                 Thread.sleep(1000)
                 i++
+
             }
 
         }
 
         //Stop key\Ключ остановки
         while (true) {
+
             val readRunning = readln()
             isRunning = offTimeManager(readRunning)
             if (!isRunning) return
+
         }
 
     }
