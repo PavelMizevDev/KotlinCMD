@@ -6,7 +6,9 @@ private fun calcWork() {
 
     println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
     print("Expression: ")
-    val input = readln() //User input prompt\Запрос ввода пользователя
+
+    //User input prompt\Запрос ввода пользователя
+    val input = readln()
 
     if (input.isBlank()) {
 
@@ -15,6 +17,7 @@ private fun calcWork() {
 
     }
 
+    //Error handling\Обработка ошибок
     try {
 
         val result = CaLib.calculate(input)
@@ -28,22 +31,26 @@ private fun calcWork() {
 
 }
 
+//Function launch\Запуск функция
 fun calc() {
 
     var input: String
 
+    //Exit request cycle\Цикл запроса выхода
     while (true) {
 
-        calcWork()
+        calcWork() //Launching the process function\Запуск процесс-функции
 
         print("Continue? [Y/n] ")
-        input = readln()
+        input = readln() //User input prompt\Запрос ввода пользователя
 
+        //Command processing\Обработка команды
         when (input) {
+
             "Y", "y" -> {}
             "N", "n" -> break
+
             else -> {
-                println("Exit cancelled due to user input error.")
 
                 println("Exit cancelled due to user input error.")
 
