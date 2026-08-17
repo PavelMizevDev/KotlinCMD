@@ -9,11 +9,11 @@ import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
 import com.turashift.kotlincmd.modules.TIMER_MANAGER_COMMAND
 
 //Importing functions from modules\Импорт функций модулей
-import com.turashift.kotlincmd.modules.Exit
-import com.turashift.kotlincmd.modules.Calc
+import com.turashift.kotlincmd.modules.exit
+import com.turashift.kotlincmd.modules.calc
 //import com.turashift.kotlincmd.modules.CreateFile
 //import com.turashift.kotlincmd.modules.DeleteFile
-import com.turashift.kotlincmd.modules.InfoCMD
+import com.turashift.kotlincmd.modules.infoCMD
 import com.turashift.kotlincmd.modules.timeManagerFun
 
 fun main() {
@@ -48,11 +48,11 @@ fun main() {
                 )
 
             }
-            EXIT_COMMAND -> exitOutput = Exit()
-            CALC_COMMAND -> Calc()
+            EXIT_COMMAND -> exitOutput = exit()
+            CALC_COMMAND -> calc()
             //CREATE_FILE_COMMAND -> CreateFile()
             //DELETE_FILE_COMMAND -> DeleteFile()
-            INFO_CMD_COMMAND -> InfoCMD()
+            INFO_CMD_COMMAND -> infoCMD()
             TIMER_MANAGER_COMMAND -> timeManagerFun()
             else -> println("Unknown command: $command.")
 

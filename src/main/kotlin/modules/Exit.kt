@@ -1,6 +1,6 @@
 package com.turashift.kotlincmd.modules
 
-fun Exit(): Boolean {
+fun exit(): Boolean {
 
     //Exit val\Переменная выхода
     var output: Boolean
