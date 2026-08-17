@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.turashift.kotlincmd"
-version = "12-01082026a"
+version = "13-17082026a"
 
 sourceSets {
     main {
