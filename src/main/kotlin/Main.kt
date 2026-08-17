@@ -6,7 +6,7 @@ import com.turashift.kotlincmd.modules.CALC_COMMAND
 //import com.turashift.kotlincmd.modules.CREATE_FILE_COMMAND
 //import com.turashift.kotlincmd.modules.DELETE_FILE_COMMAND
 import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
-import com.turashift.kotlincmd.modules.TIMER_COMMAND
+import com.turashift.kotlincmd.modules.TIMER_MANAGER_COMMAND
 
 //Importing functions from modules\Импорт функций модулей
 import com.turashift.kotlincmd.modules.Exit
@@ -14,7 +14,7 @@ import com.turashift.kotlincmd.modules.Calc
 //import com.turashift.kotlincmd.modules.CreateFile
 //import com.turashift.kotlincmd.modules.DeleteFile
 import com.turashift.kotlincmd.modules.InfoCMD
-import com.turashift.kotlincmd.modules.Timer
+import com.turashift.kotlincmd.modules.timeManagerFun
 
 fun main() {
 
@@ -43,7 +43,7 @@ fun main() {
                     ${/*$CREATE_FILE_COMMAND - file creation command.*/ ""}
                     ${/*$DELETE_FILE_COMMAND - file deletion command.*/ ""}
                     $INFO_CMD_COMMAND - displaying project information.
-                    $TIMER_COMMAND - starting the timer.
+                    $TIMER_MANAGER_COMMAND - starting the TimerManager (Timer/Stopwatch).
                     """.trimIndent()
                 )
 
@@ -53,7 +53,7 @@ fun main() {
             //CREATE_FILE_COMMAND -> CreateFile()
             //DELETE_FILE_COMMAND -> DeleteFile()
             INFO_CMD_COMMAND -> InfoCMD()
-            TIMER_COMMAND -> Timer()
+            TIMER_MANAGER_COMMAND -> timeManagerFun()
             else -> println("Unknown command: $command.")
 
         }
