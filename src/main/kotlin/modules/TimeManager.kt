@@ -2,14 +2,15 @@ package com.turashift.kotlincmd.modules
 
 import kotlin.concurrent.thread
 
+//StartFunction
 fun timeManagerFun() {
 
-    val tManager = TimeManager() //Importing the class\Подключение класса
+    val tManager = TimeManager() //Connecting a class
 
     print("Select: Timer - [T/t] or Stopwatch - [S/s] ")
-    val select = readln() //User input prompt\Запрос ввода пользователя
+    val select = readln()
 
-    //Command processing\Обработка команды
+    //CommandProcessing
     when (select) {
 
         "T", "t" -> {
@@ -29,22 +30,19 @@ fun timeManagerFun() {
 class TimeManager {
 
     //Flags
-    /* (`@Volatile` guarantees that a change to a variable made by one thread is immediately visible to all other threads.\
-    `@Volatile` гарантирует, что изменение переменной одним потоком мнгновенно видны всем остальным потокам.) */
+    //`@Volatile` ensures that changes to a variable by one thread are instantly visible to all other threads.
     @Volatile private var isRunning = false
     @Volatile private var timerRunning = false
 
-    //Timer\Таймер
     fun timer() {
 
         isRunning = true
         timerRunning = true
 
-        //Seconds request\Запрос секунд
         print("How many seconds to set the timer for: ")
         var i = readln().toIntOrNull()
 
-        //Input processing\Обработка ввода
+        //CommandProcessing
         if (i == null) {
 
             println("Input error! Only integers are allowed!")
@@ -60,13 +58,12 @@ class TimeManager {
             println("Seconds elapsed: $i")
             print("Stop? [Y/n] ")
 
-            //New thread\Новый поток
+            //Needed for multi-threading so that during counting you can stop the counting
             thread {
 
-                //Counting cycle\Цикл отсчета
                 while (isRunning) {
 
-                    //Time variables\Переменные времени
+                    //Calculation of variables using the Day.Hour:Minute:Second format
                     val s = i % 60 //Seconds
                     val m = (i / 60) % 60 //Minutes
                     val h = (i / 3600) % 24 //Hours
@@ -74,7 +71,7 @@ class TimeManager {
 
                     print("\u001B[s\u001B[1A\r\u001B[2KSeconds elapsed: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
 
-                    //Checking that the number does not become less than 1\Проверка чтобы число не стало меньше 1
+                    //Processing to ensure that the timer does not go into minus
                     if (i < 1) {
 
                         print("\u001B[u\r\u001B[2KTime's up! Press Enter to close!")
@@ -91,7 +88,7 @@ class TimeManager {
 
             }
 
-            //Stop key\Ключ остановки
+            //StopKey
             while (isRunning) {
 
                 val readRunning = readln()
@@ -111,23 +108,22 @@ class TimeManager {
 
     }
 
-    //Stopwatch\Секундомер
     fun stopwatch() {
 
         isRunning = true
 
+        //Called the output in advance for it to work correctly
         println("Seconds passed: 0")
         print("Stop? [Y/n] ")
 
-        //New thread\Новый поток
+        //Needed for multi-threading so that during counting you can stop the counting
         thread {
 
-            var i: Long = 0 //Iteration variable\Переменная для итераций
+            var i: Long = 0
 
-            //Counting cycle\Цикл отсчета
             while (isRunning) {
 
-                //Time variables\Переменные времени
+                //Calculation of variables using the Day.Hour:Minute:Second format
                 val s = i % 60 //Seconds
                 val m = (i / 60) % 60 //Minutes
                 val h = (i / 3600) % 24 //Hours
@@ -153,12 +149,12 @@ class TimeManager {
 
     }
 
-    //Stop confirmation\Подтверждение остановки
+    //StopConfirmation
     fun offTimeManager (command: String) : Boolean {
 
         var bool: Boolean
 
-        //Command processing\Обработка команды
+        //CommandProcessing
         if (command == "Y" || command == "y") {
 
             bool = false

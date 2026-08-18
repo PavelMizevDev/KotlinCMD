@@ -2,16 +2,14 @@ package com.turashift.kotlincmd.modules
 
 fun exit(): Boolean {
 
-    //Exit val\Переменная выхода
+    //KeyVariable
     var output: Boolean
 
-    //Confirmation request\Запрос подтверждения
     print("Confirm exit? [Y/n] ")
 
-    //User confirmation\Ввод подтверждения
     val confirm = readln()
 
-    //Command processing\Обработка команды
+    //CommandProcessing
     when (confirm) {
 
         "Y", "y" -> {
@@ -34,7 +32,6 @@ fun exit(): Boolean {
 
     }
 
-    //Data
     return output
 
 }

@@ -2,12 +2,12 @@ package com.turashift.kotlincmd.modules
 
 import calib.CaLib
 
+//WorkingFunction
 private fun calcWork() {
 
     println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
     print("Expression: ")
 
-    //User input prompt\Запрос ввода пользователя
     val input = readln()
 
     if (input.isBlank()) {
@@ -17,7 +17,7 @@ private fun calcWork() {
 
     }
 
-    //Error handling\Обработка ошибок
+    //ErrorHandling
     try {
 
         val result = CaLib.calculate(input)
@@ -31,20 +31,21 @@ private fun calcWork() {
 
 }
 
-//Function launch\Запуск функция
+//StartFunction
 fun calc() {
 
+    //InputVariable
     var input: String
 
-    //Exit request cycle\Цикл запроса выхода
+    //FunctionExitRequestCycle
     while (true) {
 
-        calcWork() //Launching the process function\Запуск процесс-функции
+        calcWork()
 
         print("Continue? [Y/n] ")
-        input = readln() //User input prompt\Запрос ввода пользователя
+        input = readln()
 
-        //Command processing\Обработка команды
+        //CommandProcessing
         when (input) {
 
             "Y", "y" -> {}

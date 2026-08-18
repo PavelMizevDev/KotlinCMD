@@ -1,6 +1,6 @@
 package com.turashift.kotlincmd
 
-//Importing commands\Импорт команд
+//ImportCommands
 import com.turashift.kotlincmd.modules.EXIT_COMMAND
 import com.turashift.kotlincmd.modules.CALC_COMMAND
 //import com.turashift.kotlincmd.modules.CREATE_FILE_COMMAND
@@ -8,7 +8,7 @@ import com.turashift.kotlincmd.modules.CALC_COMMAND
 import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
 import com.turashift.kotlincmd.modules.TIMER_MANAGER_COMMAND
 
-//Importing functions from modules\Импорт функций модулей
+//Importing functions, classes from modules
 import com.turashift.kotlincmd.modules.exit
 import com.turashift.kotlincmd.modules.calc
 //import com.turashift.kotlincmd.modules.CreateFile
@@ -18,19 +18,18 @@ import com.turashift.kotlincmd.modules.timeManagerFun
 
 fun main() {
 
-    //Variables\Переменные
+    //KeyVariable
     var exitOutput = true
 
-    //Main program loop\Основной цикл
+    //MainCycleProgram
     while (exitOutput) {
 
-        //Command promt\Промт команды
+        //TerminalPrompt
         print("$PROMT ~> ")
 
-        //Read command\Ввод команды
         var command = readln()
 
-        //Command processing\Обработка команды
+        //ProcessingCommands
         when(command) {
 
             HELP_COMMAND -> {
