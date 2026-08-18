@@ -55,7 +55,7 @@ class TimeManager {
 
         } else {
 
-            println("Seconds elapsed: $i")
+            println("")
             print("Stop? [Y/n] ")
 
             //Needed for multi-threading so that during counting you can stop the counting
@@ -69,7 +69,7 @@ class TimeManager {
                     val h = (i / 3600) % 24 //Hours
                     val d = i / 86400 //Days
 
-                    print("\u001B[s\u001B[1A\r\u001B[2KSeconds elapsed: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
+                    print("\u001B[s\u001B[1A\r\u001B[2KTime left: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
 
                     //Processing to ensure that the timer does not go into minus
                     if (i < 1) {
@@ -113,7 +113,7 @@ class TimeManager {
         isRunning = true
 
         //Called the output in advance for it to work correctly
-        println("Seconds passed: 0")
+        println("")
         print("Stop? [Y/n] ")
 
         //Needed for multi-threading so that during counting you can stop the counting
@@ -129,7 +129,7 @@ class TimeManager {
                 val h = (i / 3600) % 24 //Hours
                 val d = i / 86400 //Days
 
-                print("\u001B[s\u001B[1A\r\u001B[2KIt has passed: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
+                print("\u001B[s\u001B[1A\r\u001B[2KTime passed: ${d}D.${h}H:${m}M:${s}S [ ${i}S ]\u001B[u")
 
                 Thread.sleep(1000)
                 i++
@@ -158,7 +158,7 @@ class TimeManager {
         if (command == "Y" || command == "y") {
 
             bool = false
-            println("\u001B[u\r\u001B[2KStop process")
+            println("\u001B[u\r\u001B[2KTimeManager has stopped!")
 
         } else {
 

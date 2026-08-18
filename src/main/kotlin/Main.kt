@@ -18,6 +18,8 @@ import com.turashift.kotlincmd.modules.timeManagerFun
 
 fun main() {
 
+
+
     //KeyVariable
     var exitOutput = true
 
@@ -25,9 +27,9 @@ fun main() {
     while (exitOutput) {
 
         //TerminalPrompt
-        print("$PROMT ~> ")
+        print("$PROMPT ~> ")
 
-        var command = readln()
+        val command = readln()
 
         //ProcessingCommands
         when(command) {
@@ -60,7 +62,7 @@ fun main() {
 }
 
 const val HELP_COMMAND = "help"
-const val PROMT = "kcmd"
+const val PROMPT = "kcmd"
 
 
 /*
