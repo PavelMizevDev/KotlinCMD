@@ -20,7 +20,7 @@ Create File > C:/Users/Admin/Documents/text.txt #Creates the file at the specifi
 ```
 - `dfile` - activates the file manager with file deletion capabilities (works just like the creation command, but for deleting) (Disconnected! Not working!).
 - `info_cmd` - displays project information.
-- `timer` - starts a one-second timer.
+- `tM` - launch the TimeManager (Timer/Stopwatch).
 
 #### Running the program:
 
@@ -78,7 +78,7 @@ Create File > C:/Users/Admin/Documents/text.txt #Файл создастся п�
 ```
 - `dfile` - активирует файловый менеджер с возможностью создавать файлы (все аналогично с созданием, только тут удаление) (Отключено! Не работает!).
 - `info_cmd` - отображает информацию о проекте.
-- `timer` - запускает секундный таймер.
+- `tM` - запускает TimeManager (Таймер/Секундомер).
 
 #### Запуск программы:
 
