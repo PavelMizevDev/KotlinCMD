@@ -2,64 +2,70 @@ package com.turashift.kotlincmd.modules
 
 import calib.CaLib
 
-//WorkingFunction
-private fun calcWork() {
+class Calculator {
 
-    println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
-    print("Expression: ")
+    //StartFunction
+    fun calc() {
 
-    val input = readln()
+        //InputVariable
+        var input: String
 
-    if (input.isBlank()) {
+        //FunctionExitRequestCycle
+        while (true) {
 
-        println("Input error: Expression cannot be empty.")
-        return
+            calcWork()
 
-    }
+            print("Continue? [Y/n] ")
+            input = readln()
 
-    //ErrorHandling
-    try {
+            //CommandProcessing
+            when (input) {
 
-        val result = CaLib.calculate(input)
-        println("Answer: $result")
+                "Y", "y" -> {}
+                "N", "n" -> break
 
-    } catch (e: IllegalArgumentException) {
+                else -> {
 
-        println("Calculation error: ${e.message}")
+                    println("Exit cancelled due to user input error.")
 
-    }
-
-}
-
-//StartFunction
-fun calc() {
-
-    //InputVariable
-    var input: String
-
-    //FunctionExitRequestCycle
-    while (true) {
-
-        calcWork()
-
-        print("Continue? [Y/n] ")
-        input = readln()
-
-        //CommandProcessing
-        when (input) {
-
-            "Y", "y" -> {}
-            "N", "n" -> break
-
-            else -> {
-
-                println("Exit cancelled due to user input error.")
+                }
 
             }
 
         }
 
     }
+
+    //WorkingFunction
+    private fun calcWork() {
+
+        println("Enter a mathematical expression for example: \"2 + 2 * 2\" or \"(10 / 2) ^ 3\".")
+        print("Expression: ")
+
+        val input = readln()
+
+        if (input.isBlank()) {
+
+            println("Input error: Expression cannot be empty.")
+            return
+
+        }
+
+        //ErrorHandling
+        try {
+
+            val result = CaLib.calculate(input)
+            println("Answer: $result")
+
+        } catch (e: IllegalArgumentException) {
+
+            println("Calculation error: ${e.message}")
+
+        }
+
+    }
+
+
 
 }
 

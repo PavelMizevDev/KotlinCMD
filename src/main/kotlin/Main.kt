@@ -10,7 +10,7 @@ import com.turashift.kotlincmd.modules.TIMER_MANAGER_COMMAND
 
 //Importing functions, classes from modules
 import com.turashift.kotlincmd.modules.exit
-import com.turashift.kotlincmd.modules.calc
+import com.turashift.kotlincmd.modules.Calculator
 //import com.turashift.kotlincmd.modules.CreateFile
 //import com.turashift.kotlincmd.modules.DeleteFile
 import com.turashift.kotlincmd.modules.infoCMD
@@ -18,7 +18,7 @@ import com.turashift.kotlincmd.modules.timeManagerFun
 
 fun main() {
 
-
+    val calcValue = Calculator()
 
     //KeyVariable
     var exitOutput = true
@@ -48,7 +48,7 @@ fun main() {
 
             }
             EXIT_COMMAND -> exitOutput = exit()
-            CALC_COMMAND -> calc()
+            CALC_COMMAND -> calcValue.calc()
             //CREATE_FILE_COMMAND -> CreateFile()
             //DELETE_FILE_COMMAND -> DeleteFile()
             INFO_CMD_COMMAND -> infoCMD()
