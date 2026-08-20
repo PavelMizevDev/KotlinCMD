@@ -3,18 +3,16 @@ package com.turashift.kotlincmd
 //ImportCommands
 import com.turashift.kotlincmd.modules.EXIT_COMMAND
 import com.turashift.kotlincmd.modules.CALC_COMMAND
-//import com.turashift.kotlincmd.modules.CREATE_FILE_COMMAND
-//import com.turashift.kotlincmd.modules.DELETE_FILE_COMMAND
 import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
 import com.turashift.kotlincmd.modules.TIMER_MANAGER_COMMAND
+import com.turashift.kotlincmd.modules.FILE_MANAGER
 
 //Importing functions, classes from modules
 import com.turashift.kotlincmd.modules.exit
 import com.turashift.kotlincmd.modules.Calculator
-//import com.turashift.kotlincmd.modules.CreateFile
-//import com.turashift.kotlincmd.modules.DeleteFile
 import com.turashift.kotlincmd.modules.infoCMD
 import com.turashift.kotlincmd.modules.timeManagerFun
+import com.turashift.kotlincmd.modules.fileManagerFun
 
 fun main() {
 
@@ -38,21 +36,21 @@ fun main() {
 
                 println(
                     """
-                    $HELP_COMMAND - displays available commands.
-                    $EXIT_COMMAND - closes the terminal after confirmation.
-                    $CALC_COMMAND - launches the calculator.
-                    $INFO_CMD_COMMAND - displaying project information.
-                    $TIMER_MANAGER_COMMAND - starting the TimerManager (Timer/Stopwatch).
+                    $HELP_COMMAND - Displays available commands.
+                    $EXIT_COMMAND - Closes the terminal after confirmation.
+                    $CALC_COMMAND - Launches the calculator.
+                    $INFO_CMD_COMMAND - Displaying project information.
+                    $TIMER_MANAGER_COMMAND - Запускает TimeManager (Timer/Stopwatch).
+                    $FILE_MANAGER - Launches FileManager.
                     """.trimIndent()
                 )
 
             }
             EXIT_COMMAND -> exitOutput = exit()
             CALC_COMMAND -> calcValue.calc()
-            //CREATE_FILE_COMMAND -> CreateFile()
-            //DELETE_FILE_COMMAND -> DeleteFile()
             INFO_CMD_COMMAND -> infoCMD()
             TIMER_MANAGER_COMMAND -> timeManagerFun()
+            FILE_MANAGER -> fileManagerFun()
             else -> println("Unknown command: $command.")
 
         }
