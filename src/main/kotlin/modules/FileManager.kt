@@ -90,11 +90,11 @@ class FileManager {
         //Processing for existence
         if (!newFolder.exists()) {
 
-            println("File already exists")
+            println("Path doesn't exist!")
 
         } else if (!newFolder.isDirectory()) {
 
-            println("Directory already exists")
+            println("Directory doesn't exist!")
 
         } else {
 
