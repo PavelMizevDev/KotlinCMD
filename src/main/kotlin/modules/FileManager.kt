@@ -1,8 +1,12 @@
 package com.turashift.kotlincmd.modules
 
 import kotlin.io.path.Path
+import kotlin.io.path.createDirectory
+import kotlin.io.path.createFile
+import kotlin.io.path.deleteExisting
 import kotlin.io.path.exists
 import kotlin.io.path.isDirectory
+import kotlin.io.path.listDirectoryEntries
 
 //StartFunction
 fun fileManagerFun () {
@@ -24,6 +28,10 @@ fun fileManagerFun () {
                 $HELP_COMMAND_IN_FILEMANAGER - Used to help with FileManager commands.
                 $UP_FOLDER - After using this command you will be taken to the directory above.
                 $GO_TO_FOLDER - After using this command you will be asked to enter the path to the directory you want to go to.
+                $LIST_FOLDER - Displays a list of files or folders in the selected folder path.
+                $CREATE_DIR - Use to create a folder.
+                $CREATE_FILE - Use to create a file.
+                $REMOVE_DIR_OR_FILE - Use to remove a folder or file.
                 $EXIT_FILEMANAGER - To exit FileManager.
                 """.trimIndent())
 
@@ -37,6 +45,14 @@ fun fileManagerFun () {
                 fileManagerClass.goAlongThePath(readln())
 
             }
+
+            LIST_FOLDER -> fileManagerClass.listFolder()
+
+            CREATE_DIR -> fileManagerClass.createDirectory()
+
+            CREATE_FILE -> fileManagerClass.createFile()
+
+            REMOVE_DIR_OR_FILE -> fileManagerClass.removeFileOrDir()
 
             EXIT_FILEMANAGER -> break
 
@@ -94,11 +110,200 @@ class FileManager {
 
         } else if (!newFolder.isDirectory()) {
 
-            println("Directory doesn't exist!")
+            println("This path is a file, not a directory!")
 
         } else {
 
             currentFolder = newFolder
+
+        }
+
+    }
+
+    /* A very important function for displaying files and folders as a list;
+    that is, if you are in '/home/user/Videos', using the 'list' command will output a list of folders and files, for example:
+    [Directory] Family
+    [File] film.mov
+    */
+    fun listFolder  () {
+
+        if (!currentFolder.exists()) {
+
+            println("Path doesn't exist!")
+            return
+
+        }
+
+        val listVal = currentFolder.listDirectoryEntries()
+
+        try {
+
+            if (listVal.isEmpty()) {
+
+                println("The folder is empty.")
+                return
+
+            }
+
+            for (item in listVal) {
+
+                if (item.isDirectory()) {
+
+                    println("[Directory] ${item.fileName}")
+
+                } else {
+
+                    println("[File] ${item.fileName}")
+
+                }
+
+            }
+
+        } catch (e: Exception) {
+
+            println("Error: ${e.message}")
+
+        }
+
+    }
+
+    /* An important function for creating files—for example,
+    when located in 'home/user/'—is that after using the 'cD' command and entering a name (such as 'Games'),
+    a folder with the path 'home/user/Games' will be created.
+    (It is best not to start the name with a '/' character; otherwise, the folder will be created at the root of the disk.) */
+    fun createDirectory () {
+
+        confirmChangePath()
+
+        if (!currentFolder.exists()) {
+
+            println("Path doesn't exist!")
+            return
+
+        }
+
+        println("Name the folder: ")
+        val nameFolder = currentFolder.resolve(readln())
+
+        if (nameFolder.exists()) {
+
+            println("Directory already exists!")
+            return
+
+        }
+
+        try {
+
+            nameFolder.createDirectory()
+            println("Folder $nameFolder successfully created!")
+
+        } catch (e: Exception) {
+
+            println("Error: ${e.message}")
+
+        }
+
+    }
+
+    /* A useful function for creating empty files: for example,
+    if you are in '/home/user/Documents' and use the 'cF' command followed by a filename with an extension (such as 'file.txt'),
+    a file with the path '/home/user/Documents/file.txt' will be created.
+    (It is best not to start the name with a '/' character; otherwise, the folder will be created at the root of thek.) */
+    fun createFile () {
+
+        confirmChangePath()
+
+        if (!currentFolder.exists()) {
+
+            println("Path doesn't exist!")
+            return
+
+        }
+
+        println("Name the file: ")
+        val nameFile = currentFolder.resolve(readln())
+
+        if (nameFile.exists()) {
+
+            println("The file already exists!")
+            return
+
+        }
+
+        try {
+
+            nameFile.createFile()
+            println("File $nameFile successfully created!")
+
+        } catch (e: Exception) {
+
+            println("Error: ${e.message}")
+
+        }
+
+    }
+
+    /* This is an important function for deleting files or folders; for example,
+    if you are in 'home/user/NNdir', using the 'del' command followed by the name of the folder or file will delete it.
+    Important: if you are deleting a folder, it must be empty! */
+    fun removeFileOrDir () {
+
+        confirmChangePath()
+
+        if (!currentFolder.exists()) {
+
+            println("Path doesn't exist!")
+            return
+
+        }
+
+        print("Name of the folder or file to delete: ")
+        val inputName = currentFolder.resolve(readln())
+
+        if (!inputName.exists()) {
+
+            println("The file already exists!")
+            return
+
+        }
+
+        try {
+
+            inputName.deleteExisting()
+            println("File $inputName successfully deleted!")
+
+        } catch (e: Exception) {
+
+            println("Error: ${e.message}")
+
+        }
+
+    }
+
+    fun confirmChangePath () {
+
+        println("Chosen path: $currentFolder")
+        println("Change the path? [Y/n] ")
+        val confirm = readln()
+
+        when (confirm) {
+
+            "Y", "y" -> {
+
+                print("Write down your path: ")
+                val input = readln()
+                goAlongThePath(input)
+                println("Chosen path: $currentFolder")
+
+            }
+            "N", "n" -> {
+
+            }
+            else -> {
+
+                println("Invalid command: $confirm! N selected.")
+
+            }
 
         }
 
@@ -109,6 +314,10 @@ class FileManager {
 const val HELP_COMMAND_IN_FILEMANAGER = "help"
 const val UP_FOLDER = "uF"
 const val GO_TO_FOLDER = "go"
+const val LIST_FOLDER = "list"
+const val CREATE_DIR = "cD"
+const val CREATE_FILE = "cF"
+const val REMOVE_DIR_OR_FILE = "del"
 const val EXIT_FILEMANAGER = "exit"
 
 const val FILE_MANAGER = "fM"
