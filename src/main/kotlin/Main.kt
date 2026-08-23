@@ -40,7 +40,7 @@ fun main() {
                     $EXIT_COMMAND - Closes the terminal after confirmation.
                     $CALC_COMMAND - Launches the calculator.
                     $INFO_CMD_COMMAND - Displaying project information.
-                    $TIMER_MANAGER_COMMAND - Запускает TimeManager (Timer/Stopwatch).
+                    $TIMER_MANAGER_COMMAND - Launches TimeManager (Timer/Stopwatch).
                     $FILE_MANAGER - Launches FileManager.
                     """.trimIndent()
                 )
