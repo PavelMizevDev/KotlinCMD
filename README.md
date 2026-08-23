@@ -1,26 +1,24 @@
 # En:
 
 ## KotlinCMD – a project built using the Kotlin programming language.
-This project is currently a pseudo-terminal intended to evolve into a full-fledged terminal.
-While its feature set is currently limited, the core concept is to allow users to add their own plugins in the form of `.jar` files.
-Additionally, this project is being developed as part of my process of learning the Kotlin programming language.
+It is a terminal application (currently launched via the OS terminal and lacking its own dedicated window). The concept behind the terminal is to provide users with a cross-platform console that supports adding easily created `.jar` files as plugins. The project is currently under development but is actively evolving. Author: Pavel Mizev.
 
 ### Features:
-Currently, this project includes only 7 commands:
-- `help` - displays available terminal commands.
-- `exit` - exits the terminal (with confirmation).
-- `calc` - launches the calculator.
-- `cfile` - activates the file manager with file creation capabilities (Disconnected! Not working!).
-> Usage:
-```bash
-Create File > text.txt #Creates the file in the same directory as the program (KotlinCMD); similar to ./text.txt. You can also use ../text.txt to create a file in the parent directory.
-```
-```bash
-Create File > C:/Users/Admin/Documents/text.txt #Creates the file at the specified path.
-```
-- `dfile` - activates the file manager with file deletion capabilities (works just like the creation command, but for deleting) (Disconnected! Not working!).
-- `info_cmd` - displays project information.
-- `tM` - launch the TimeManager (Timer/Stopwatch).
+The following commands are currently available:
+- `help` - Displays the list of terminal commands.
+- `exit` - Closes the terminal.
+- `info` - Program information.
+- `calc` - Launches the calculator.
+- `tmanag` - Launches TimeManager (includes Timer and Stopwatch functions).
+- `fmanag` - Launches FileManager; the following commands are available:
+    - `help` - Displays the list of FileManager commands.
+    - `exit` - Closes the FileManager process.
+    - `uf` - Moves up one directory level.
+    - `cd` - Prompts for a user-specified path.
+    - `list` - Lists folders and files at the current path.
+    - `cdir` - Creates a folder at the current path.
+    - `cfil` - Creates a file at the current path.
+    - `del` - Deletes a folder or file at the current path.
 
 #### Running the program:
 
@@ -59,26 +57,24 @@ Contact me: all available contact methods can be found on my GitHub profile.
 # Ru:
 
 ## KotlinCMD - проект созданный на языке программирования Kotlin.
-Этот проект представляет из себя псевдотерминал, который в будущем должен стать полноценным терминалом.
-В нем пока что мало возможностей, но, основная идея состоит в том чтобы пользователь мог добавлять свои плагины в виде файлов `.jar`.
-Также этот проект создается во время моего обучения языка программирования Kotlin.
+Он представляет из себя терминал (Пока запускаемый через терминал ОС и не имеет своего окна). Идея терминала: дать пользователю кроссплатформенную консоль с возможностью добавления легкосоздаваемых `.jar` файлов в качестве плагинов. Проект пока в стадии разработки, но активно развивается. Автор: Павел Мизев.
 
 ### Возможности:
-На данный момент этот проект имеет лишь 7 команд:
-- `help` - используется для вывода доступных команд терминала.
-- `exit` - используется для выхода с терминала с подтверждением.
-- `calc` - используется для запуска калькулятора.
-- `cfile` - активирует файловый менеджер с возможностью создавать файлы (Отключено! Не работает!).
-> как использовать:
-```bash
-Create File > text.txt #Файл создастся там же где лежит файл программы (KotlinCMD), этот способ аналогичен ./text.txt и также есть ../text.txt который может создасть файл на папку выше относительно программы.
-```
-```bash
-Create File > C:/Users/Admin/Documents/text.txt #Файл создастся по заданному пути.
-```
-- `dfile` - активирует файловый менеджер с возможностью создавать файлы (все аналогично с созданием, только тут удаление) (Отключено! Не работает!).
-- `info_cmd` - отображает информацию о проекте.
-- `tM` - запускает TimeManager (Таймер/Секундомер).
+На данный момент доступны такие команды:
+- `help` - Отображает список команд терминала.
+- `exit` - Закрывает терминал.
+- `info` - Информация о программе.
+- `calc` - Запускает калькулятор.
+- `tmanag` - Запускает TimeManager (Внутри доступен Таймер и Секундомер).
+- `fmanag` - Запускает FileManager, доступны следующие команды:
+    - `help` - Отображает список команд FileManager.
+    - `exit` - Закрывает процесс FileManager.
+    - `uf` - Переносит вас на папку выше.
+    - `cd` - Запрашивает пользовательский путь.
+    - `list` - Отображает список папок и файлов по текущему пути.
+    - `cdir` - Создает папку по текущему пути.
+    - `cfil` - Создает файл по текущему пути.
+    - `del` - Удаляет папку или файл по текущему пути.
 
 #### Запуск программы:
 
