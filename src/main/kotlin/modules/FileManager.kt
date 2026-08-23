@@ -1,5 +1,7 @@
 package com.turashift.kotlincmd.modules
 
+import com.turashift.kotlincmd.HELP_COMMAND
+
 import kotlin.io.path.Path
 import kotlin.io.path.createDirectory
 import kotlin.io.path.createFile
@@ -22,17 +24,17 @@ fun fileManagerFun () {
 
         when (command) {
 
-            HELP_COMMAND_IN_FILEMANAGER -> {
+            HELP_COMMAND -> {
 
                 println("""
-                $HELP_COMMAND_IN_FILEMANAGER - Used to help with FileManager commands.
+                $HELP_COMMAND - Used to help with FileManager commands.
                 $UP_FOLDER - After using this command you will be taken to the directory above.
                 $GO_TO_FOLDER - After using this command you will be asked to enter the path to the directory you want to go to.
                 $LIST_FOLDER - Displays a list of files or folders in the selected folder path.
                 $CREATE_DIR - Use to create a folder.
                 $CREATE_FILE - Use to create a file.
                 $REMOVE_DIR_OR_FILE - Use to remove a folder or file.
-                $EXIT_FILEMANAGER - To exit FileManager.
+                $EXIT_COMMAND - To exit FileManager.
                 """.trimIndent())
 
             }
@@ -54,7 +56,7 @@ fun fileManagerFun () {
 
             REMOVE_DIR_OR_FILE -> fileManagerClass.removeFileOrDir()
 
-            EXIT_FILEMANAGER -> break
+            EXIT_COMMAND -> break
 
             else -> println("Unknown command: $command")
 
@@ -276,13 +278,11 @@ class FileManager {
 
 }
 
-const val HELP_COMMAND_IN_FILEMANAGER = "help"
-const val UP_FOLDER = "uF"
-const val GO_TO_FOLDER = "go"
+const val UP_FOLDER = "uf"
+const val GO_TO_FOLDER = "cd"
 const val LIST_FOLDER = "list"
-const val CREATE_DIR = "cD"
-const val CREATE_FILE = "cF"
+const val CREATE_DIR = "cdir"
+const val CREATE_FILE = "cfil"
 const val REMOVE_DIR_OR_FILE = "del"
-const val EXIT_FILEMANAGER = "exit"
 
-const val FILE_MANAGER = "fM"
+const val FILE_MANAGER = "fmanag"

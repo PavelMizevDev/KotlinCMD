@@ -173,4 +173,4 @@ class TimeManager {
 
 }
 
-const val TIMER_MANAGER_COMMAND = "tM"
+const val TIMER_MANAGER_COMMAND = "tmanag"

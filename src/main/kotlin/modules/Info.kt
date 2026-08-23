@@ -17,4 +17,4 @@ fun infoCMD () {
 
 }
 
-const val INFO_CMD_COMMAND = "info_cmd"
+const val INFO_CMD_COMMAND = "info"
