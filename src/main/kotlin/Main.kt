@@ -36,11 +36,11 @@ fun main() {
 
                 println(
                     """
-                    $HELP_COMMAND - Displays available commands.
-                    $EXIT_COMMAND - Closes the terminal after confirmation.
+                    $HELP_COMMAND - Displays the list of terminal commands.
+                    $EXIT_COMMAND - Closes the terminal.
                     $CALC_COMMAND - Launches the calculator.
-                    $INFO_CMD_COMMAND - Displaying project information.
-                    $TIMER_MANAGER_COMMAND - Launches TimeManager (Timer/Stopwatch).
+                    $INFO_CMD_COMMAND - Program information.
+                    $TIMER_MANAGER_COMMAND - Launches TimeManager (includes Timer and Stopwatch functions).
                     $FILE_MANAGER - Launches FileManager.
                     """.trimIndent()
                 )

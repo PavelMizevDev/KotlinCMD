@@ -27,14 +27,14 @@ fun fileManagerFun () {
             HELP_COMMAND -> {
 
                 println("""
-                $HELP_COMMAND - Used to help with FileManager commands.
-                $UP_FOLDER - After using this command you will be taken to the directory above.
-                $GO_TO_FOLDER - After using this command you will be asked to enter the path to the directory you want to go to.
-                $LIST_FOLDER - Displays a list of files or folders in the selected folder path.
-                $CREATE_DIR - Use to create a folder.
-                $CREATE_FILE - Use to create a file.
-                $REMOVE_DIR_OR_FILE - Use to remove a folder or file.
-                $EXIT_COMMAND - To exit FileManager.
+                $HELP_COMMAND - Displays the list of FileManager commands.
+                $UP_FOLDER - Moves up one directory level.
+                $GO_TO_FOLDER - Prompts for a user-specified path.
+                $LIST_FOLDER - Lists folders and files at the current path.
+                $CREATE_DIR - Creates a folder at the current path.
+                $CREATE_FILE - Creates a file at the current path.
+                $REMOVE_DIR_OR_FILE - Deletes a folder or file at the current path.
+                $EXIT_COMMAND - Closes the FileManager process.
                 """.trimIndent())
 
             }
