@@ -173,8 +173,6 @@ class FileManager {
     (It is best not to start the name with a '/' character; otherwise, the folder will be created at the root of the disk.) */
     fun createDirectory () {
 
-        confirmChangePath()
-
         if (!currentFolder.exists()) {
 
             println("Path doesn't exist!")
@@ -211,8 +209,6 @@ class FileManager {
     (It is best not to start the name with a '/' character; otherwise, the folder will be created at the root of thek.) */
     fun createFile () {
 
-        confirmChangePath()
-
         if (!currentFolder.exists()) {
 
             println("Path doesn't exist!")
@@ -248,8 +244,6 @@ class FileManager {
     Important: if you are deleting a folder, it must be empty! */
     fun removeFileOrDir () {
 
-        confirmChangePath()
-
         if (!currentFolder.exists()) {
 
             println("Path doesn't exist!")
@@ -275,35 +269,6 @@ class FileManager {
         } catch (e: Exception) {
 
             println("Error: ${e.message}")
-
-        }
-
-    }
-
-    fun confirmChangePath () {
-
-        println("Chosen path: $currentFolder")
-        print("Change the path? [Y/n] ")
-        val confirm = readln()
-
-        when (confirm) {
-
-            "Y", "y" -> {
-
-                print("Write down your path: ")
-                val input = readln()
-                goAlongThePath(input)
-                println("Chosen path: $currentFolder")
-
-            }
-            "N", "n" -> {
-
-            }
-            else -> {
-
-                println("Invalid command: $confirm! N selected.")
-
-            }
 
         }
 
