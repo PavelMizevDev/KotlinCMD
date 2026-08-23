@@ -182,7 +182,7 @@ class FileManager {
 
         }
 
-        println("Name the folder: ")
+        print("Name the folder: ")
         val nameFolder = currentFolder.resolve(readln())
 
         if (nameFolder.exists()) {
@@ -220,7 +220,7 @@ class FileManager {
 
         }
 
-        println("Name the file: ")
+        print("Name the file: ")
         val nameFile = currentFolder.resolve(readln())
 
         if (nameFile.exists()) {
@@ -283,7 +283,7 @@ class FileManager {
     fun confirmChangePath () {
 
         println("Chosen path: $currentFolder")
-        println("Change the path? [Y/n] ")
+        print("Change the path? [Y/n] ")
         val confirm = readln()
 
         when (confirm) {
