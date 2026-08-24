@@ -182,17 +182,17 @@ class FileManager {
 
         }
 
-        print("Name the folder: ")
-        val nameFolder = currentFolder.resolve(readln())
-
-        if (nameFolder.exists()) {
-
-            println("Directory already exists!")
-            return
-
-        }
-
         try {
+
+            print("Name the folder: ")
+            val nameFolder = currentFolder.resolve(readln())
+
+            if (nameFolder.exists()) {
+
+                println("Directory already exists!")
+                return
+
+            }
 
             nameFolder.createDirectory()
             println("Folder $nameFolder successfully created!")
@@ -218,17 +218,17 @@ class FileManager {
 
         }
 
-        print("Name the file: ")
-        val nameFile = currentFolder.resolve(readln())
-
-        if (nameFile.exists()) {
-
-            println("The file already exists!")
-            return
-
-        }
-
         try {
+
+            print("Name the file: ")
+            val nameFile = currentFolder.resolve(readln())
+
+            if (nameFile.exists()) {
+
+                println("The file already exists!")
+                return
+
+            }
 
             nameFile.createFile()
             println("File $nameFile successfully created!")
@@ -253,17 +253,17 @@ class FileManager {
 
         }
 
-        print("Name of the folder or file to delete: ")
-        val inputName = currentFolder.resolve(readln())
-
-        if (!inputName.exists()) {
-
-            println("The file already exists!")
-            return
-
-        }
-
         try {
+
+            print("Name of the folder or file to delete: ")
+            val inputName = currentFolder.resolve(readln())
+
+            if (!inputName.exists()) {
+
+                println("The file already exists!")
+                return
+
+            }
 
             inputName.deleteExisting()
             println("File $inputName successfully deleted!")
