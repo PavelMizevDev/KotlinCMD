@@ -4,6 +4,8 @@ fun infoCMD () {
 
     println(
         """
+            
+        ==================================================
         Project: KotlinCMD
         Version: 14-23082026a
         Last updated: 23.08.2026 (DD.MM.YYYY)
@@ -12,6 +14,8 @@ fun infoCMD () {
         Developers:
         - Pavel Mizev ( https://github.com/PavelMizevDev )
         - Roit ( https://github.com/Roit-liasp )
+        ==================================================
+        
         """.trimIndent()
     )
 
