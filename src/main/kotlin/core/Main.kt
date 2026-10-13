@@ -1,16 +1,16 @@
 package com.turashift.kotlincmd.core
 
 //ImportCommands
-import com.turashift.kotlincmd.core.system.EXIT_COMMAND
+import com.turashift.kotlincmd.core.system.exit.EXIT_COMMAND
 import com.turashift.kotlincmd.modules.calculator.CALC_COMMAND
-import com.turashift.kotlincmd.core.system.INFO_CMD_COMMAND
+import com.turashift.kotlincmd.core.system.info_program.INFO_CMD_COMMAND
 import com.turashift.kotlincmd.modules.time_manager.TIMER_MANAGER_COMMAND
 import com.turashift.kotlincmd.modules.file_manager.FILE_MANAGER
 
 //Importing functions, classes from modules
-import com.turashift.kotlincmd.core.system.exit
+import com.turashift.kotlincmd.core.system.exit.exit
 import com.turashift.kotlincmd.modules.calculator.Calculator
-import com.turashift.kotlincmd.core.system.infoCMD
+import com.turashift.kotlincmd.core.system.info_program.infoCMD
 import com.turashift.kotlincmd.modules.time_manager.timeManagerFun
 import com.turashift.kotlincmd.modules.file_manager.fileManagerFun
 

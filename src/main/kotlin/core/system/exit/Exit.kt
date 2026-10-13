@@ -1,4 +1,4 @@
-package com.turashift.kotlincmd.core.system
+package com.turashift.kotlincmd.core.system.exit
 
 fun exit(): Boolean {
 
