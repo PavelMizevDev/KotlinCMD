@@ -12,7 +12,7 @@ version = "14-23082026a"
 sourceSets {
     main {
         kotlin.srcDirs("src/main/kotlin")
-        java.srcDirs("src/main/kotlin")
+        java.srcDirs("src/main/java")
     }
 }
 
@@ -27,7 +27,7 @@ dependencies {
 tasks.named<Jar>("jar") {
     manifest {
         attributes(
-            "Main-Class" to "com.turashift.kotlincmd.MainKt"
+            "Main-Class" to "com.turashift.kotlincmd.core.MainKt"
         )
     }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE

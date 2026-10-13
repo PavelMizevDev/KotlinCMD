@@ -1,4 +1,4 @@
-package com.turashift.kotlincmd.main
+package com.turashift.kotlincmd.core
 
 //ImportCommands
 import com.turashift.kotlincmd.core.system.EXIT_COMMAND
