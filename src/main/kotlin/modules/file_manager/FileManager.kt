@@ -1,7 +1,7 @@
 package com.turashift.kotlincmd.modules.file_manager
 
-import com.turashift.kotlincmd.main.HELP_COMMAND
-import com.turashift.kotlincmd.core.system.EXIT_COMMAND
+import com.turashift.kotlincmd.core.HELP_COMMAND
+import com.turashift.kotlincmd.core.system.exit.EXIT_COMMAND
 
 import kotlin.io.path.Path
 import kotlin.io.path.createDirectory
