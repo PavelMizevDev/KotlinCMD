@@ -1,6 +1,7 @@
-package com.turashift.kotlincmd.modules
+package com.turashift.kotlincmd.modules.file_manager
 
-import com.turashift.kotlincmd.HELP_COMMAND
+import com.turashift.kotlincmd.main.HELP_COMMAND
+import com.turashift.kotlincmd.core.system.EXIT_COMMAND
 
 import kotlin.io.path.Path
 import kotlin.io.path.createDirectory
@@ -34,7 +35,7 @@ fun fileManagerFun () {
                 $CREATE_DIR - Creates a folder at the current path.
                 $CREATE_FILE - Creates a file at the current path.
                 $REMOVE_DIR_OR_FILE - Deletes a folder or file at the current path.
-                $EXIT_COMMAND - Closes the FileManager process.
+                ${EXIT_COMMAND} - Closes the FileManager process.
                 """.trimIndent())
 
             }

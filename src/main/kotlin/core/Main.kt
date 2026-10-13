@@ -1,18 +1,18 @@
-package com.turashift.kotlincmd
+package com.turashift.kotlincmd.main
 
 //ImportCommands
-import com.turashift.kotlincmd.modules.EXIT_COMMAND
-import com.turashift.kotlincmd.modules.CALC_COMMAND
-import com.turashift.kotlincmd.modules.INFO_CMD_COMMAND
-import com.turashift.kotlincmd.modules.TIMER_MANAGER_COMMAND
-import com.turashift.kotlincmd.modules.FILE_MANAGER
+import com.turashift.kotlincmd.core.system.EXIT_COMMAND
+import com.turashift.kotlincmd.modules.calculator.CALC_COMMAND
+import com.turashift.kotlincmd.core.system.INFO_CMD_COMMAND
+import com.turashift.kotlincmd.modules.time_manager.TIMER_MANAGER_COMMAND
+import com.turashift.kotlincmd.modules.file_manager.FILE_MANAGER
 
 //Importing functions, classes from modules
-import com.turashift.kotlincmd.modules.exit
-import com.turashift.kotlincmd.modules.Calculator
-import com.turashift.kotlincmd.modules.infoCMD
-import com.turashift.kotlincmd.modules.timeManagerFun
-import com.turashift.kotlincmd.modules.fileManagerFun
+import com.turashift.kotlincmd.core.system.exit
+import com.turashift.kotlincmd.modules.calculator.Calculator
+import com.turashift.kotlincmd.core.system.infoCMD
+import com.turashift.kotlincmd.modules.time_manager.timeManagerFun
+import com.turashift.kotlincmd.modules.file_manager.fileManagerFun
 
 fun main() {
 

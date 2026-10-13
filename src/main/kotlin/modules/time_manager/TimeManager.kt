@@ -1,4 +1,4 @@
-package com.turashift.kotlincmd.modules
+package com.turashift.kotlincmd.modules.time_manager
 
 import kotlin.concurrent.thread
 

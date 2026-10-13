@@ -1,4 +1,4 @@
-package com.turashift.kotlincmd.modules
+package com.turashift.kotlincmd.core.system
 
 fun infoCMD () {
 

@@ -1,4 +1,4 @@
-package com.turashift.kotlincmd.modules
+package com.turashift.kotlincmd.modules.calculator
 
 import calib.CaLib
 
