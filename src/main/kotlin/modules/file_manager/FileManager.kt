@@ -137,9 +137,9 @@ class FileManager {
 
         }
 
-        val listVal = currentFolder.listDirectoryEntries()
-
         try {
+
+            val listVal = currentFolder.listDirectoryEntries()
 
             if (listVal.isEmpty()) {
 
