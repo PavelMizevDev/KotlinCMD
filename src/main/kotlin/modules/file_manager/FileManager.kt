@@ -261,7 +261,7 @@ class FileManager {
 
             if (!inputName.exists()) {
 
-                println("The file already exists!")
+                println("File or directory doesn't exist!")
                 return
 
             }
