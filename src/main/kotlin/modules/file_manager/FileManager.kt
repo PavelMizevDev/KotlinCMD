@@ -104,22 +104,31 @@ class FileManager {
     and with '/' (Or something else, depending on the OS in which the root of the directory is called differently) the path will be completely rewritten. */
     fun goAlongThePath (input: String) {
 
-        val newFolder = currentFolder.resolve(input)
+        try {
 
-        //Processing for existence
-        if (!newFolder.exists()) {
+            val newFolder = currentFolder.resolve(input)
 
-            println("Path doesn't exist!")
+            //Processing for existence
+            if (!newFolder.exists()) {
 
-        } else if (!newFolder.isDirectory()) {
+                println("Path doesn't exist!")
 
-            println("This path is a file, not a directory!")
+            } else if (!newFolder.isDirectory()) {
 
-        } else {
+                println("This path is a file, not a directory!")
 
-            currentFolder = newFolder
+            } else {
+
+                currentFolder = newFolder
+
+            }
+
+        } catch (e: Exception) {
+
+            println("Error: ${e.message}")
 
         }
+
 
     }
 
